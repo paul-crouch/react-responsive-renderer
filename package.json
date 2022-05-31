@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "A React component to render child components based on media queries",
   "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -23,5 +26,8 @@
   },
   "peerDependencies": {
     "react": ">=16"
+  },
+  "np": {
+    "contents": "dist"
   }
 }
