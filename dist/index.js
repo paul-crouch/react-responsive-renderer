@@ -1,6 +1,6 @@
 import { jsx as _jsx } from "react/jsx-runtime";
 import { useState, useEffect, useRef, Fragment } from "react";
-export var ReactResponsiveRenderer = function (_a) {
+export var ResponsiveRenderer = function (_a) {
     var query = _a.query, children = _a.children;
     var _b = useState(false), canRender = _b[0], setCanRender = _b[1];
     var queryList = useRef(null);
