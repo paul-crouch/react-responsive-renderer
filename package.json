@@ -2,7 +2,7 @@
   "name": "react-responsive-renderer",
   "version": "1.0.0",
   "description": "A React component to render child components based on media queries",
-  "main": "build/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -26,4 +26,3 @@ export var ReactResponsiveRenderer = function (_a) {
     }, [canRender, query]);
     return canRender ? _jsx(Fragment, { children: children }) : null;
 };
-//# sourceMappingURL=index.js.map
