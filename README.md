@@ -2,9 +2,23 @@
 
 A React component that renders its children based on media query matches.
 
+## Installation
+
+```
+npm i react-responsive-renderer
+```
+
+or
+
+```
+yarn add react-responsive-renderer
+```
+
 ## Implementation
 
-Uses the `Window.matchmedia` api that takes a media query and returns a `MediaQueryList` object representing the parsed result. [read more](https://developer.mozilla.org/en-US/docs/Web/API/Window/matchMedia)
+Uses the `Window.matchmedia` api that takes a media query and returns a `MediaQueryList` object representing the parsed result. [read more](https://developer.mozilla.org/en-US/docs/Web/API/Window/matchMedia).
+
+This module is written in Typescript.
 
 ## Usage
 
@@ -12,7 +26,7 @@ Wrap you React component(s) in the ReactResponsiveRenderer and supply a valid me
 
 ```javascript
     import { ResponsiveRenderer } from "react-responsive-renderer";
-    ...
+    // ...
     <ResponsiveRenderer query="only screen and (max-width: 480px)">
         <PhoneOnlyComponent />
     </ResponsiveRenderer>
