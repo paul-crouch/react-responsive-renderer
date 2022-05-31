@@ -1,0 +1,27 @@
+{
+  "name": "react-responsive-renderer",
+  "version": "1.0.0",
+  "description": "A React component to render child components based on media queries",
+  "main": "build/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paul-crouch/react-responsive-renderer.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/paul-crouch/react-responsive-renderer/issues"
+  },
+  "homepage": "https://github.com/paul-crouch/react-responsive-renderer#readme",
+  "devDependencies": {
+    "@types/node": "^17.0.36",
+    "@types/react": "^18.0.9",
+    "react": "^18.1.0",
+    "typescript": "^4.7.2"
+  },
+  "peerDependencies": {
+    "react": ">=16"
+  }
+}
