@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { useCallback } from "react";
 import { useState, useEffect, useRef, Fragment } from "react";
 
 interface ReactResponsiveRendererProps {
@@ -13,13 +14,13 @@ export const ResponsiveRenderer = ({
   const [canRender, setCanRender] = useState(false);
   const queryList = useRef<MediaQueryList | null>(null);
 
-  useEffect(() => {
-    let updateState = () => {
-      if (queryList.current!.matches !== canRender) {
-        setCanRender(queryList.current!.matches);
-      }
-    };
+  let updateState = useCallback(() => {
+    if (queryList.current?.matches !== canRender) {
+      setCanRender(queryList.current!.matches);
+    }
+  }, [canRender]);
 
+  useEffect(() => {
     let tearDown = () => {
       if (queryList.current) {
         queryList.current.removeEventListener("change", updateState);
@@ -33,10 +34,11 @@ export const ResponsiveRenderer = ({
 
     tearDown();
     queryList.current = global.matchMedia(query);
-    queryList.current!.addEventListener("change", updateState);
+    updateState();
+    queryList.current.addEventListener("change", updateState);
 
     return tearDown;
-  }, [canRender, query]);
+  }, [query, updateState]);
 
   return canRender ? <Fragment>{children}</Fragment> : null;
 };
