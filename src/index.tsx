@@ -6,7 +6,7 @@ interface ReactResponsiveRendererProps {
   children: ReactNode;
 }
 
-export const ReactResponsiveRenderer = ({
+export const ResponsiveRenderer = ({
   query,
   children,
 }: ReactResponsiveRendererProps) => {
