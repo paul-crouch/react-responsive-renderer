@@ -6,8 +6,7 @@ export var ResponsiveRenderer = function (_a) {
     var _b = useState(false), canRender = _b[0], setCanRender = _b[1];
     var queryList = useRef(null);
     var updateState = useCallback(function () {
-        var _a;
-        if (((_a = queryList.current) === null || _a === void 0 ? void 0 : _a.matches) !== canRender) {
+        if (queryList.current && queryList.current.matches !== canRender) {
             setCanRender(queryList.current.matches);
         }
     }, [canRender]);

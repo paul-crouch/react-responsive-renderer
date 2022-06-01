@@ -15,6 +15,15 @@
     "url": "https://github.com/paul-crouch/react-responsive-renderer/issues"
   },
   "homepage": "https://github.com/paul-crouch/react-responsive-renderer#readme",
+  "keywords": [
+    "react",
+    "responsive",
+    "responsive render",
+    "media query",
+    "media queries",
+    "matchmedia",
+    "viewport"
+  ],
   "devDependencies": {
     "@types/node": "^17.0.36",
     "@types/react": "^18.0.9",

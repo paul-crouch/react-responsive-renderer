@@ -22,11 +22,13 @@ This module is written in Typescript.
 
 ## Usage
 
-Wrap you React component(s) in the ReactResponsiveRenderer and supply a valid media query via the `query` prop.
+Wrap your React component(s) in the ReactResponsiveRenderer and supply a valid media query via the `query` prop.
+
+The child component(s) will only render when the media query is satisfied. The ResponsiveRenderer will react to changes in viewport dimensions.
 
 ```javascript
     import { ResponsiveRenderer } from "react-responsive-renderer";
-    // ...
+
     <ResponsiveRenderer query="only screen and (max-width: 480px)">
         <PhoneOnlyComponent />
     </ResponsiveRenderer>

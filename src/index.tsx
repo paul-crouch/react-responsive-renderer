@@ -15,8 +15,8 @@ export const ResponsiveRenderer = ({
   const queryList = useRef<MediaQueryList | null>(null);
 
   let updateState = useCallback(() => {
-    if (queryList.current?.matches !== canRender) {
-      setCanRender(queryList.current!.matches);
+    if (queryList.current && queryList.current.matches !== canRender) {
+      setCanRender(queryList.current.matches);
     }
   }, [canRender]);
 
