@@ -3,7 +3,6 @@
   "version": "1.1.4",
   "description": "A React component to render child components based on media queries",
   "main": "dist/index.js",
-  "type": "module",
   "files": [
     "dist"
   ],
